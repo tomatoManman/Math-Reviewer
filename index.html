@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Mathematics Reviewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Complete Mathematics Reviewer</h1>
+        <p>A robust, quick reference guide for essential math rules and concepts.</p>
+    </header>
+
+    <div class="container">
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <button id="theme-toggle" class="btn-secondary">🌙 Dark Mode</button>
+            <ul class="toc-list" style="margin-top: 1rem;">
+                <li class="toc-category"><strong>Unit 1: Pre-Algebra</strong></li>
+                <li class="toc-item"><a href="#order-of-operations">1. Order of Operations</a></li>
+                <li class="toc-item"><a href="#divisibility">2. Divisibility Rules</a></li>
+                <li class="toc-item"><a href="#exponents">3. Exponents</a></li>
+                <li class="toc-item"><a href="#fractions">4. Fractions</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            
+            <div class="unit-section" id="pre-algebra">
+                <h2 class="unit-header">Unit 1: Pre-Algebra</h2>
+                
+                <section id="order-of-operations">
+                    <details open>
+                        <summary><h3>1. Order of Operations</h3></summary>
+                        <div class="section-content">
+                            <div class="importance">Level of Importance: ★★★★★ (MUST KNOW)</div>
+                            <p>The only rule to follow is <strong>GEMDAS</strong>.</p>
+                            
+                            <ol class="rule-list">
+                                <li><strong>G - Groupings:</strong> <code>()</code> then <code>[]</code> then <code>{}</code>
+                                    <br><em>Note: Sometimes there are only parentheses, follow the INSIDE-TO-OUTSIDE rule.</em>
+                                </li>
+                                <li><strong>E - Exponents</strong></li>
+                                <li><strong>M - Multiplication / D - Division:</strong> Are in the same level of priority. Prioritize <strong>LEFT FIRST</strong>.</li>
+                                <li><strong>A - Addition / S - Subtraction:</strong> Are in the same level of priority. Prioritize <strong>LEFT FIRST</strong>.</li>
+                            </ol>
+
+                            <div class="quiz-container">
+                                <h4>⚡ Quick Quiz</h4>
+                                <div class="question">
+                                    <p>1. According to GEMDAS, which operation should you perform first in the expression: <code>5 + (3 x 2)<sup>2</sup></code>?</p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, false)">Addition</button>
+                                        <button onclick="checkAnswer(this, false)">Exponents</button>
+                                        <button onclick="checkAnswer(this, true)">Grouping (3 x 2)</button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+
+                <hr>
+
+                <section id="divisibility">
+                    <details open>
+                        <summary><h3>2. Divisibility Rules</h3></summary>
+                        <div class="section-content">
+                            <div class="importance">Level of Importance: ★★★★☆ (CONVENIENT TO KNOW)</div>
+                            <p><strong>Definition:</strong> A number is divisible by a number <em>n</em> when the remainder is 0 when the number is divided by <em>n</em>.</p>
+
+                            <ul class="rule-list">
+                                <li><strong>Divisible by 2:</strong> If the ones digit is even or among the following: 0, 2, 4, 6, 8.</li>
+                                <li><strong>Divisible by 3:</strong> If the sum of all digits is divisible by 3.</li>
+                                <li><strong>Divisible by 4:</strong> If the number formed by the tens and ones digit is divisible by 4.</li>
+                                <li><strong>Divisible by 5:</strong> If the ones digit is either 0 or 5.</li>
+                                <li><strong>Divisible by 6:</strong> If the number is divisible by both 2 and 3.</li>
+                                <li><strong>Divisible by 7:</strong> Double the ones digit, subtract it from the remaining digits. If the difference is divisible by 7, the number is divisible by 7.</li>
+                                <li><strong>Divisible by 8:</strong> If it is even and the number formed by the hundreds, tens, and ones digit is divisible by 8.</li>
+                                <li><strong>Divisible by 9:</strong> If the sum of all the digits is divisible by 9.</li>
+                                <li><strong>Divisible by 10:</strong> If the number ends in, or the ones digit is, 0.</li>
+                            </ul>
+
+                            <table class="simple-table">
+                                <thead>
+                                    <tr>
+                                        <th>Divisible by...</th>
+                                        <th>Rule</th>
+                                        <th>Examples</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>2</strong></td>
+                                        <td>Ones digit is even or among: 0, 2, 4, 6, 8.</td>
+                                        <td><code>54</code>, <code>628</code> (Even) <br><code>143</code> (Not divisible)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3</strong></td>
+                                        <td>Sum of all digits is divisible by 3.</td>
+                                        <td><code>312 &rarr; 3+1+2 = 6</code> (Yes) <br><code>52 &rarr; 5+2 = 7</code> (No)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>4</strong></td>
+                                        <td>Number formed by tens and ones digit is divisible by 4.</td>
+                                        <td><code>1708 &rarr; 08</code> (Yes) <br><code>225 &rarr; 25</code> (No)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>5</strong></td>
+                                        <td>Ones digit is either 0 or 5.</td>
+                                        <td><code>230</code>, <code>25</code> (Yes) <br><code>73</code> (No)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>6</strong></td>
+                                        <td>Divisible by both 2 and 3. <em>(Tip: If odd, don't bother checking)</em>.</td>
+                                        <td><code>216</code> (Yes) <br><code>217</code> (No, odd)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>7</strong></td>
+                                        <td>Double the ones digit, subtract from remaining digits.</td>
+                                        <td><code>189 &rarr; 18 - 18 = 0</code> (Yes)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>8</strong></td>
+                                        <td>If even and the hundreds, tens, and ones digits are divisible by 8.</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>9</strong></td>
+                                        <td>Sum of all digits is divisible by 9.</td>
+                                        <td><code>252 &rarr; 2+5+2 = 9</code> (Yes)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>10</strong></td>
+                                        <td>Number ends in / ones digit is 0.</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="quiz-container">
+                                <h4>⚡ Quick Quiz</h4>
+                                <div class="question">
+                                    <p>1. Is <strong>252</strong> divisible by 9?</p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, true)">Yes (2+5+2 = 9)</button>
+                                        <button onclick="checkAnswer(this, false)">No</button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                                <div class="question">
+                                    <p>2. Is <strong>189</strong> divisible by 7?</p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, true)">Yes (18 - 18 = 0)</button>
+                                        <button onclick="checkAnswer(this, false)">No</button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+
+                <hr>
+
+                <section id="exponents">
+                    <details open>
+                        <summary><h3>3. Exponents</h3></summary>
+                        <div class="section-content">
+                            <div class="importance">Level of Importance: ★★★★★ (HELPS IN MOST CASES)</div>
+                            
+                            <ul class="rule-list">
+                                <li><strong>Zero Exponent:</strong> Any number EXCEPT 0 raised to 0 is equal to 1. <em>(Note: 0<sup>0</sup> &rarr; INDETERMINATE)</em>
+                                    <br><em>Examples:</em> <code>3<sup>0</sup> = 1</code> | <code>17<sup>0</sup> = 1</code> | <code>523<sup>0</sup> = 1</code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Base 1:</strong> 1 raised to any number equals 1.
+                                    <br><em>Examples:</em> <code>1<sup>4</sup> = 1</code> | <code>1<sup>0</sup> = 1</code> | <code>1<sup>2017</sup> = 1</code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Exponent 1:</strong> Any number raised to 1 is itself.
+                                    <br><em>Examples:</em> <code>7<sup>1</sup> = 7</code> | <code>58<sup>1</sup> = 58</code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Negative Exponents:</strong> Negative exponents mean reciprocal.
+                                    <br><em>Examples:</em> <code>5<sup>-1</sup> = 1/5</code> | <code>2<sup>-3</sup> = 1/8</code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Multiplying Same Base:</strong> Add exponents when multiplying numbers with the same base.
+                                    <br><em>Examples:</em> <code>3<sup>2</sup> &times; 3<sup>3</sup> = 3<sup>5</sup></code> | <code>12<sup>4</sup> &times; 12<sup>6</sup> = 12<sup>10</sup></code> 
+                                </li>
+                                
+                                <li style="margin-top: 10px;"><strong>Dividing Same Base:</strong> Subtract exponents when dividing numbers with the same base.
+                                    <br><em>Examples:</em> <code>3<sup>3</sup> &divide; 3<sup>2</sup> = 3<sup>1</sup> = 3</code> | <code>12<sup>6</sup> &divide; 12<sup>4</sup> = 12<sup>2</sup></code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Same Exponents:</strong> To multiply or divide numbers with the same exponents, simply do the corresponding operation on their bases and keep the exponents.
+                                    <br><em>Examples:</em> <code>3<sup>3</sup> &times; 6<sup>3</sup> = 18<sup>3</sup></code> | <code>21<sup>4</sup> &divide; 7<sup>4</sup> = 3<sup>4</sup></code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Power of a Power:</strong> Multiply exponents raised to exponents.
+                                    <br><em>Example:</em> <code>(5<sup>3</sup>)<sup>5</sup> = 5<sup>15</sup></code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Distributing Exponents:</strong> Distribute exponents outside of groupings.
+                                    <br><em>Examples:</em> <code>(7x)<sup>3</sup> = 7<sup>3</sup>x<sup>3</sup> = 343x<sup>3</sup></code> | <code>(1/2)<sup>4</sup> = 1<sup>4</sup> / 2<sup>4</sup> = 1/16</code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Fractional Exponents:</strong> If the exponent is a fraction, place the base under a radical with index of the denominator and exponent of the numerator.
+                                    <br><em>Examples:</em> <code>2<sup>1/2</sup> = &radic;2</code> | <code>12<sup>3/4</sup> = <sup>4</sup>&radic;(12<sup>3</sup>)</code>
+                                </li>
+                            </ul>
+
+                            <table class="simple-table">
+                                <thead>
+                                    <tr>
+                                        <th>Rule</th>
+                                        <th>Examples</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Zero Exponent:</strong> Any number EXCEPT 0 raised to 0 is equal to 1. <em>(0<sup>0</sup> &rarr; Indeterminate)</em>.</td>
+                                        <td><code>3<sup>0</sup> = 1</code><br><code>523<sup>0</sup> = 1</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Base 1 / Exponent 1:</strong> 1 raised to any number is 1. Any number raised to 1 is itself.</td>
+                                        <td><code>1<sup>2017</sup> = 1</code><br><code>58<sup>1</sup> = 58</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Negative Exponents:</strong> Means reciprocal.</td>
+                                        <td><code>5<sup>-1</sup> = 1/5</code><br><code>2<sup>-3</sup> = 1/8</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Same Base (Mult/Div):</strong> Add exponents when multiplying; subtract when dividing.</td>
+                                        <td><code>3<sup>2</sup> &times; 3<sup>3</sup> = 3<sup>5</sup></code><br><code>12<sup>6</sup> &divide; 12<sup>4</sup> = 12<sup>2</sup></code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Same Exponent (Mult/Div):</strong> Keep exponent, perform operation on the bases.</td>
+                                        <td><code>3<sup>3</sup> &times; 6<sup>3</sup> = 18<sup>3</sup></code><br><code>21<sup>4</sup> &divide; 7<sup>4</sup> = 3<sup>4</sup></code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Power of a Power & Distributing:</strong> Multiply exponents; distribute outside groupings.</td>
+                                        <td><code>(5<sup>3</sup>)<sup>5</sup> = 5<sup>15</sup></code><br><code>(7x)<sup>3</sup> = 343x<sup>3</sup></code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fractional Exponents:</strong> Base goes under a radical. Index is the denominator, exponent is the numerator.</td>
+                                        <td><code>2<sup>1/2</sup> = &radic;2</code><br><code>12<sup>3/4</sup> = <sup>4</sup>&radic;(12<sup>3</sup>)</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="quiz-container">
+                                <h4>⚡ Quick Quiz</h4>
+                                <div class="question">
+                                    <p>1. What is the value of <code>523<sup>0</sup></code>?</p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, false)">0</button>
+                                        <button onclick="checkAnswer(this, true)">1</button>
+                                        <button onclick="checkAnswer(this, false)">523</button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                                <div class="question">
+                                    <p>2. Simplify the expression: <code>(5<sup>3</sup>)<sup>5</sup></code></p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, false)">5<sup>8</sup></button>
+                                        <button onclick="checkAnswer(this, true)">5<sup>15</sup></button>
+                                        <button onclick="checkAnswer(this, false)">15<sup>5</sup></button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                                <div class="question">
+                                    <p>3. How do you rewrite <code>12<sup>3/4</sup></code> in radical form?</p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, true)"><sup>4</sup>&radic;(12<sup>3</sup>)</button>
+                                        <button onclick="checkAnswer(this, false)"><sup>3</sup>&radic;(12<sup>4</sup>)</button>
+                                        <button onclick="checkAnswer(this, false)">12(&radic;3)</button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+
+                <hr>
+
+                <section id="fractions">
+                    <details open>
+                        <summary><h3>4. Fractions</h3></summary>
+                        <div class="section-content">
+                            <div class="importance">Level of Importance: ★★★★★ (FUNDAMENTAL)</div>
+                            
+                            <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: var(--accent);">Relationships of Fractions</h4>
+                            <ul class="rule-list">
+                                <li><strong>Same Denominator:</strong> The one with the greater numerator is greater.
+                                    <br><em>Example:</em> <code>11/72 > 7/72</code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Same Numerator:</strong> The one with the lesser denominator is greater.
+                                    <br><em>Example:</em> <code>13/3 > 13/4</code>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Quick Comparison (Different Numerators & Denominators):</strong> Cross multiply the numerators and denominators; numerators take priority in comparison. The numerator that yielded the greater product is the greater fraction.
+                                    <br><em>Example:</em> Compare <code>3/13</code> and <code>5/27</code> &rarr; <code>(3 &times; 27)</code> and <code>(5 &times; 13)</code> &rarr; <code>81 > 65</code> &rarr; <code>3/13 > 5/27</code>
+                                </li>
+                            </ul>
+
+                            <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent);">Operations on Fractions</h4>
+                            <p><strong>Definition:</strong> Fractions are "like" when they have similar denominators.</p>
+                            <h4 style="margin-top: 1rem; margin-bottom: 0.5rem; color: var(--accent);">Relationships of Fractions</h4>
+                            <ul class="rule-list">
+                                <li><strong>Same Denominator:</strong> The one with the greater numerator is greater.
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td><code>11/72 > 7/72</code></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Same Numerator:</strong> The one with the lesser denominator is greater.
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td><code>13/3 > 13/4</code></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Quick Comparison (Different Numerators & Denominators):</strong> Cross multiply the numerators and denominators; numerators take priority in comparison. The numerator that yielded the greater product is the greater fraction.
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Fractions</th>
+                                            <th>Cross Multiplication</th>
+                                            <th>Result</th>
+                                        </tr>
+                                        <tr>
+                                            <td><code>3/13</code> and <code>5/27</code></td>
+                                            <td><code>(3 &times; 27)</code> and <code>(5 &times; 13)</code></td>
+                                            <td><code>81 > 65</code> &rarr; <code>3/13 > 5/27</code></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+
+                            <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent);">Operations on Fractions</h4>
+                            <p><strong>Definition:</strong> Fractions are "like" when they have similar denominators.</p>
+                            <ul class="rule-list">
+                                <li><strong>Addition or Subtraction:</strong> 
+                                    <br><em>Step 1:</em> Turn fractions into like fractions. To turn unlike fractions into like fractions, you may choose any non-zero number to multiply or divide both the numerator and denominator of a fraction to have both fractions with similar denominator.
+                                    <br><em>Step 2:</em> Add or subtract the numerators according to the corresponding operation on fractions.
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Like Denominators</td>
+                                            <td><code>2/5 + 4/5 = 6/5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Unlike Denominators</td>
+                                            <td><code>7/2 + 8/3 = (7&times;3)/(2&times;3) + (8&times;2)/(3&times;2) = 21/6 + 16/6 = 37/6</code></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Multiplication:</strong> Multiply both the numerators with each other and both denominators with each other.
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Examples</th>
+                                        </tr>
+                                        <tr>
+                                            <td><code>(11/9) &times; (5/2) = (11&times;5)/(9&times;2) = 55/18</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>(17/3) &times; (14/3) = (17&times;14)/(3&times;3) = 238/9</code></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li style="margin-top: 10px;"><strong>Division:</strong> Get the reciprocal of the divisor then multiply. (Definition: The reciprocal of a fraction <em>a/b</em> is <em>b/a</em>).
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Examples</th>
+                                        </tr>
+                                        <tr>
+                                            <td><code>(11/9) &divide; (5/2) = (11/9) &times; (2/5) = 22/45</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>(17/3) &divide; (14/3) = (17/3) &times; (3/14) = 51/42</code></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+
+                            <table class="simple-table">
+                                <thead>
+                                    <tr>
+                                        <th>Concept</th>
+                                        <th>Rule</th>
+                                        <th>Examples</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Comparing</strong></td>
+                                        <td>Same denom: Greater numerator is greater. Same num: Lesser denom is greater. Or, cross multiply.</td>
+                                        <td><code>11/72 > 7/72</code><br><code>3/13 vs 5/27 &rarr; 81 > 65</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Add / Subtract</strong></td>
+                                        <td>Turn into like fractions (same denominator), then operate on numerators.</td>
+                                        <td><code>7/2 + 8/3 = 21/6 + 16/6 = 37/6</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Multiply</strong></td>
+                                        <td>Multiply numerators together, multiply denominators together.</td>
+                                        <td><code>(11/9) &times; (5/2) = 55/18</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Divide</strong></td>
+                                        <td>Get the reciprocal of the divisor, then multiply.</td>
+                                        <td><code>(11/9) &divide; (5/2) = (11/9) &times; (2/5) = 22/45</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="quiz-container">
+                                <h4>⚡ Quick Quiz</h4>
+                                <div class="question">
+                                    <p>1. Which fraction is greater: <code>2/7</code> or <code>3/11</code>?</p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, true)">2/7 (because 22 > 21)</button>
+                                        <button onclick="checkAnswer(this, false)">3/11</button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                                <div class="question">
+                                    <p>2. What is the first step when dividing two fractions?</p>
+                                    <div class="options">
+                                        <button onclick="checkAnswer(this, false)">Find a common denominator</button>
+                                        <button onclick="checkAnswer(this, true)">Get the reciprocal of the divisor, then multiply</button>
+                                        <button onclick="checkAnswer(this, false)">Multiply straight across</button>
+                                    </div>
+                                    <p class="feedback"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
